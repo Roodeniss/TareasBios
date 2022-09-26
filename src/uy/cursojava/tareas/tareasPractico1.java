@@ -4,13 +4,7 @@
  */
 package uy.cursojava.tareas;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import uy.cursojava.tareas.Tareas;
 
 import java.util.Scanner;
 
@@ -26,6 +20,7 @@ public class tareasPractico1 {
     static Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Tareas t = new Tareas();
         String entradaTxt = "";
         Integer opc = 0;
         Boolean entradaCorrecta = true;
@@ -38,47 +33,118 @@ public class tareasPractico1 {
                 while (opc != 6) {
                     switch (opc) {
                         case 1:
-                            System.out.println("Ingreso al ejercicio: 1\n");
-                            ejercicio1();
+                            System.out.println("Ingreso a la tarea3: \n");
+                            t.tarea3();
                             entradaCorrecta = true;
-                            System.out.println("Ingrese el numero de la tarea a ejecutar [1-3] o 4 para terminar el proceso\n");
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
                             entradaTxt = entrada.nextLine();
                             opc = Integer.parseInt(entradaTxt);
                             break;
                         case 2:
-                            System.out.println("Ingreso al ejercicio: 2\n");
-                            ejercicio2();
+                            System.out.println("Ingreso a la tarea 4: \n");
+                            t.tarea4();
                             entradaCorrecta = true;
-                            System.out.println("Ingrese el numero de la tarea a ejecutar [1-3] o 4 para terminar el proceso\n");
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
                             entradaTxt = entrada.nextLine();
                             opc = Integer.parseInt(entradaTxt);
                             break;
                         case 3:
-                            System.out.println("Ingreso al ejercicio: 3 \n");
-
+                            System.out.println("Ingreso a a tarea 5:\n");
+                            t.tarea5();
                             entradaCorrecta = true;
-                            System.out.println("Ingrese el numero de la tarea a ejecutar [1-3] o 4 para terminar el proceso\n");
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
                             entradaTxt = entrada.nextLine();
                             opc = Integer.parseInt(entradaTxt);
                             break;
                         case 4:
-                            System.out.println("Ingreso al ejercicio: 4 \n");
-                            ejercicio4();
+                            System.out.println("Ingreso a la tarea meses: \n");
+                            t.tareaMeses();
                             entradaCorrecta = true;
-                            System.out.println("Ingrese el numero de la tarea a ejecutar [1-3] o 4 para terminar el proceso\n");
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
                             entradaTxt = entrada.nextLine();
                             opc = Integer.parseInt(entradaTxt);
                             break;
                         case 5:
-                            System.out.println("Ingreso al ejercicio: 3 \n");
-
+                            System.out.println("Ingreso al ejercicio 1: \n");
+                            t.ejercicio1();
                             entradaCorrecta = true;
-                            System.out.println("Ingrese el numero de la tarea a ejecutar [1-3] o 4 para terminar el proceso\n");
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
                             entradaTxt = entrada.nextLine();
                             opc = Integer.parseInt(entradaTxt);
                             break;
-
                         case 6:
+                            System.out.println("Ingreso al ejercicio 2: \n");
+                            t.ejercicio2();
+                            entradaCorrecta = true;
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
+                            entradaTxt = entrada.nextLine();
+                            opc = Integer.parseInt(entradaTxt);
+                            break;
+                        case 7:
+                            System.out.println("Ingreso al ejercicio 3: \n");
+                            t.ejercicio3();
+                            entradaCorrecta = true;
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
+                            entradaTxt = entrada.nextLine();
+                            opc = Integer.parseInt(entradaTxt);
+                            break;
+                        case 8:
+                            System.out.println("Ingreso al ejercicio 4: \n");
+                            t.ejercicio4();
+                            entradaCorrecta = true;
+                            System.out.println("-----------------------------------------\n"
+                                    + "Ingrese el numero de la tarea a ejecutar\n "
+                                    + "¤ [1-3] Para ejecutar las tareas\n"
+                                    + "¤ 4 Para ejecutar tarea Meses\n"
+                                    + "¤ [5-8] Para ejecutar Practico 1\n"
+                                    + "¤ 9 Terminar el proceso\n"
+                                    + "-----------------------------------------");
+                            entradaTxt = entrada.nextLine();
+                            opc = Integer.parseInt(entradaTxt);
+                            break;
+                        case 9:
                             System.exit(0);
                             break;
                     }
@@ -90,79 +156,4 @@ public class tareasPractico1 {
         }
     }
 
-    public static void ejercicio1() {
-        for (int i = 0; i <= 100; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i);
-            }
-        }
-    }
-
-    public static void ejercicio2() {
-        String salida = "*";
-        System.out.println(salida);
-        for (int i = 0; i < 10; i++) {
-            salida += "*";
-            System.out.println(salida);
-        }
-    }
-
-    public static void ejercicio3() {
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
-        Date fechaActual = new Date();
-
-    }
-
-    public static void ejercicio4() {
-        String usuario = "";
-        Integer random = (int) Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
-        Integer num = 0;
-        Boolean esIgual = false;
-        Integer cant = 1;
-        String numTxt = "";
-        System.out.println(random);
-        System.out.println("Ingrese un numbre de usuario:");
-        usuario = entrada.nextLine();
-        System.out.println("Ingrese un numero entre 1000 y 5000");
-        System.out.println("Ingrese numero: ");
-        numTxt = entrada.nextLine();
-        while (!esIgual) {
-            try {
-                num = Integer.parseInt(numTxt);
-                if (num.equals(random)) {
-                    esIgual = true;
-                } else {
-                    if (num > random) {
-                        cant++;
-                        System.out.println("Ingrese un numero menor: ");
-                        numTxt = entrada.nextLine();
-                    } else if (num < random) {
-                        cant++;
-                        System.out.println("Ingrese un numero mayor: ");
-                        numTxt = entrada.nextLine();
-                    }
-                }
-            } catch (NumberFormatException e) {
-                cant++;
-                System.out.println("Debe ingresar un numero!!");
-                numTxt = entrada.nextLine();
-                num = Integer.parseInt(numTxt);
-            }
-        }
-        if (esIgual) {
-            Integer puntaje = 1000 / cant;
-            System.out.println("Felicitaciones! Ganaste " + puntaje);
-            String txt = "<" + usuario + ">:<" + puntaje + ">";
-            try {
-                Path filePath = Paths.get("puntaje.txt");
-                //escribo el contenido en el archivo
-                Files.writeString(filePath, txt);
-                String contenido = Files.readString(filePath);
-                // verifico el contenido del archivo
-                System.out.println(contenido);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
