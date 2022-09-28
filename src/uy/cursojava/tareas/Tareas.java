@@ -4,7 +4,9 @@
  */
 package uy.cursojava.tareas;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -230,7 +232,7 @@ public class Tareas {
             System.out.println(retorno);
         }
     }
-    
+
     public void tareaMeses() {
         String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
         ArrayList<String> mesesArray = new ArrayList();
@@ -246,7 +248,7 @@ public class Tareas {
         mesesArray.add("Octubre");
         mesesArray.add("Noviembre");
         mesesArray.add("Diciembre");
-       
+
         for (int i = 0; i < meses.length; i++) {
             System.out.println(meses[i] + " \n");
         }
@@ -274,12 +276,11 @@ public class Tareas {
     }
 
     public void ejercicio3() {
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
-        Date fechaActual = new Date();
 
     }
-
+String txt = "";
     public void ejercicio4() {
+        
         String usuario = "";
         Integer random = (int) Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
         Integer num = 0;
@@ -318,16 +319,15 @@ public class Tareas {
         if (esIgual) {
             Integer puntaje = 1000 / cant;
             System.out.println("Felicitaciones! Ganaste " + puntaje);
-            String txt = "<" + usuario + ">:<" + puntaje + ">";
+            txt += "<" + usuario + ">:<" + puntaje + ">\n";
             try {
-                Path filePath = Paths.get("puntaje.txt");
                 //escribo el contenido en el archivo
-                Files.writeString(filePath, txt);
-                String contenido = Files.readString(filePath);
+                PrintStream archivo = new PrintStream("C:\\Users\\Rodrigo\\Documents\\NetBeansProjects\\TareasBios\\puntaje.txt");
+
+                archivo.println(txt);
                 // verifico el contenido del archivo
-                System.out.println(contenido);
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (FileNotFoundException ex) {
+                System.out.println("entra");
             }
         }
     }
