@@ -278,9 +278,9 @@ public class Tareas {
     public void ejercicio3() {
 
     }
-String txt = "";
+    
+    String txt = ""; // variable para ejercicio4() para que se pueda agregar mas de una linea de texto al txt
     public void ejercicio4() {
-        
         String usuario = "";
         Integer random = (int) Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
         Integer num = 0;
