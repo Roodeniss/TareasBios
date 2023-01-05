@@ -36,7 +36,7 @@ public class tareasPractico1 {
             try {
                 opc = Integer.parseInt(entradaTxt);
                 entradaCorrecta = false;
-                while (opc != 6) {
+                while (opc != 9) {
                     switch (opc) {
                         case 1:
                             System.out.println("Ingreso a la tarea3: \n");
